@@ -25,10 +25,15 @@ Gem::Specification.new do |s|
   s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ['lib']
 
+  s.add_dependency 'faraday', '~> 0.6.0'
+  s.add_dependency 'faraday_middleware'
+  s.add_dependency 'simple_oauth'
+
   s.add_development_dependency 'rspec'
   s.add_development_dependency 'bundler'
   s.add_development_dependency 'bueller'
   s.add_development_dependency 'rake'
   s.add_development_dependency 'rcov'
+  s.add_development_dependency 'vcr'
 end
 
