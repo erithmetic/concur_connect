@@ -1,5 +1,10 @@
 require "concur_connect/version"
+require "concur_connect/session"
 
 module ConcurConnect
-  # Your code goes here...
+  extend self
+
+  def session(token, secret)
+    Session.new token, secret
+  end
 end
