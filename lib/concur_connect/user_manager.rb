@@ -8,10 +8,12 @@ module ConcurConnect
       self.session = session
     end
 
-    def in_batches
-      response = session.get '/Users'
-      user = User.from_concur response
-      yield user
+    def find(company, user)
+      response = session.get 'user/v1.0/User' do |g|
+        g.headers['X-CompanyDomain'] = company
+        g.headers['X-UserID'] = user
+      end
+      User.from_concur response
     end
   end
 end
