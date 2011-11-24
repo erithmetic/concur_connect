@@ -1,22 +1,27 @@
-require 'concur_connect/user_manager'
+require 'concur_connect/user_finder'
 require 'delegate'
 require 'faraday/request/oauth'
 
 module ConcurConnect
   class Session < SimpleDelegator
-    attr_accessor :consumer_key, :consumer_secret, :debug
+    attr_accessor :consumer_key, :consumer_secret, :company_id, :debug
 
-    def initialize(consumer_key, consumer_secret, debug = false)
+    def initialize(consumer_key, consumer_secret, company_id, debug = false)
       self.consumer_key = consumer_key
       self.consumer_secret = consumer_secret
+      self.company_id = company_id
       self.debug = debug
 
       __setobj__ faraday  # wrap Faraday in a loving embrace
     end
     alias :debug? :debug
 
-    def users
-      @users ||= UserManager.new self
+    def user_finder
+      @user_finder ||= UserFinder.new self
+    end
+
+    def user(id)
+      @user ||= user_finder.find id
     end
 
     def faraday

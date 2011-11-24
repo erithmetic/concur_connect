@@ -4,7 +4,7 @@ require "concur_connect/session"
 module ConcurConnect
   extend self
 
-  def session(token, secret)
-    Session.new token, secret
+  def session(token, secret, company_id)
+    Session.new token, secret, company_id
   end
 end

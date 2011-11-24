@@ -1,11 +1,5 @@
 require 'bundler'
-begin
-  Bundler.setup
-rescue Bundler::BundlerError => e
-  $stderr.puts e.message
-  $stderr.puts "Run `bundle install` to install missing gems"
-  exit e.status_code
-end
+Bundler.setup
 
 require 'rspec'
 require 'concur_connect'
@@ -15,5 +9,4 @@ require 'concur_connect'
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
 
 RSpec.configure do |config|
-  
 end
