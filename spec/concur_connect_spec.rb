@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'vcr_setup'
 
 describe ConcurConnect do
   it 'is easy to use' do
