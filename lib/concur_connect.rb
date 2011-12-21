@@ -1,5 +1,6 @@
-require "concur_connect/version"
+require "concur_connect/itinerary_finder"
 require "concur_connect/session"
+require "concur_connect/version"
 
 module ConcurConnect
   extend self

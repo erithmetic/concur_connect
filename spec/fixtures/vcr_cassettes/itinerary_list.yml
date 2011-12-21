@@ -1,0 +1,37 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.concursolutions.com:443/api/travel/trip/v1.0/
+    body: !!null 
+    headers:
+      x-userid:
+      - derek.kastner@brighterplanet.com
+      authorization:
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="b521f3a1d4dd4318358c0cf4b1507104",
+        oauth_signature="HYWnbNK9%2FP5rd86zZ8qogwZPaO0%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1324486718", oauth_version="1.0"
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/xml
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      webserver:
+      - usseaeuicte19
+      date:
+      - Wed, 21 Dec 2011 16:58:42 GMT
+      content-length:
+      - '135'
+    body: <ItineraryInfoList xmlns="http://www.concursolutions.com/api/travel/trip/2010/06"
+      xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ItineraryInfo><id>https://www.concursoultions.com/api/travel/trip/v1.0/4294967509</id><TripName>Trip from Baltimore to New York</TripName><StartDateLocal>2010-02-15T09:00:00</StartDateLocal><EndDateLocal>2010-02-21T17:30:00</EndDateLocal><DateModifiedUtc>2010-02-14T17:13:07</DateModifiedUtc></ItineraryInfo><ItineraryInfo><id>https://www.concursoultions.com/api/travel/trip/v1.0/6337261899</id><TripName>Trip from Baltimore to Seattle</TripName><StartDateLocal>2010-03-26T09:00:00</StartDateLocal><EndDateLocal>2010-03-29T17:30:00</EndDateLocal><DateModifiedUtc>2010-03-24T19:00:00</DateModifiedUtc></ItineraryInfo></ItineraryInfoList>
+    http_version: '1.1'
