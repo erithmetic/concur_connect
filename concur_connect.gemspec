@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'faraday', '~> 0.6.0'
   s.add_dependency 'faraday_middleware'
+  s.add_dependency 'multi_xml'
   s.add_dependency 'simple_oauth'
 
   s.add_development_dependency 'rspec'

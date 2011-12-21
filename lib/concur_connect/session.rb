@@ -1,6 +1,7 @@
 require 'concur_connect/user_finder'
 require 'delegate'
 require 'faraday/request/oauth'
+require 'faraday/response/parse_xml'
 
 module ConcurConnect
   class Session < SimpleDelegator
@@ -30,9 +31,12 @@ module ConcurConnect
           :consumer_key => consumer_key,
           :consumer_secret => consumer_secret
         }
+        builder.request  :url_encoded
         builder.request  :json
         builder.response :logger if debug?
         builder.adapter  :net_http
+
+        builder.use Faraday::Response::ParseXml
       end
     end
   end

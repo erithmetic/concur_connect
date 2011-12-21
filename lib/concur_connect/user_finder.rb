@@ -13,7 +13,7 @@ module ConcurConnect
         g.headers['X-CompanyDomain'] = session.company_id
         g.headers['X-UserID'] = id
       end
-      build_user response
+      build_user response.body
     end
 
     def build_user(response)
