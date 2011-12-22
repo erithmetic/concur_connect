@@ -42,7 +42,7 @@ describe ConcurConnect::ExpenseReportFinder do
       ers.should_not be_empty
       ers.each do |expense_report|
         expense_report.should be_a(ConcurConnect::ExpenseReport)
-        expense_report.id.should =~ /http/
+        expense_report.id.should =~ /^[A-F0-9]+$/
         expense_report.name.should == 'August Expenses'
         expense_report.date.should =~ /\d{4}-\d\d-\d\d/
       end
@@ -71,7 +71,7 @@ describe ConcurConnect::ExpenseReportFinder do
       ers.should_not be_empty
       ers.each do |expense_report|
         expense_report.should be_a(ConcurConnect::ExpenseReport)
-        expense_report.id.should =~ /http/
+        expense_report.id.should =~ /^[A-F0-9]+$/
         expense_report.name.length.should > 0
         expense_report.date.should =~ /\d{4}-\d\d-\d\d/
       end

@@ -1,3 +1,4 @@
+require "concur_connect/expense_finder"
 require 'concur_connect/expense_report'
 require 'concur_connect/finder'
 
@@ -29,7 +30,7 @@ module ConcurConnect
         items = [items] unless items.is_a?(Array)
         items.each do |datum|
           expense_report = ExpenseReport.new
-          expense_report.id = datum['Report-Details-Url']
+          expense_report.id = datum['ReportId']
           expense_report.name = datum['ReportName']
           expense_report.date = datum['ReportDate']
           list << expense_report
