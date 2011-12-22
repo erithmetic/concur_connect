@@ -1,3 +1,5 @@
+require "concur_connect/expense_report_finder"
+require "concur_connect/itinerary_finder"
 require 'concur_connect/user_finder'
 require 'delegate'
 require 'faraday/request/oauth'
