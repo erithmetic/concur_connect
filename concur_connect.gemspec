@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors = ['Derek Kastner']
   s.email = 'dkastner@gmail.com'
   s.homepage = 'http://github.com/dkastner/concur_connect'
-  s.summary = %Q{TODO: one-line summary of your gem}
-  s.description = %Q{TODO: detailed description of your gem}
+  s.summary = %Q{Wrapper for ConcurConnect API}
+  s.description = %Q{Access your Concur data via OAuth}
   s.extra_rdoc_files = [
     'LICENSE',
     'README.rdoc',
