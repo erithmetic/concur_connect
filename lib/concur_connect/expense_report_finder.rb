@@ -33,6 +33,7 @@ module ConcurConnect
           expense_report.id = datum['ReportId']
           expense_report.name = datum['ReportName']
           expense_report.date = datum['ReportDate']
+          expense_report.details_url = datum['Report_Details_Url']
           expense_report.session = session
           list << expense_report
         end
