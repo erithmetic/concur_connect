@@ -5,10 +5,12 @@
     uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/reportslist/APPROVED
     body: !!null 
     headers:
+      x-userid:
+      - derek.kastner@brighterplanet.com
       authorization:
-      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="80d3669fa4fbf48a2eb1aaa5496d25fe",
-        oauth_signature="Zmw9jhM6NRtozrnT%2FtCDj1tQtJI%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1324522708", oauth_version="1.0"
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="b3348570c2e692e15d677d0ccb239a02",
+        oauth_signature="99UeXxye7urJ3gypHFjp3%2BrFS3U%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1324565124", oauth_version="1.0"
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response: !ruby/struct:VCR::Response
@@ -18,17 +20,17 @@
     headers:
       cache-control:
       - private
-      transfer-encoding:
-      - chunked
       content-type:
-      - application/xml; charset=utf-8
+      - application/xml
       server:
       - Microsoft-IIS/7.5
       x-aspnet-version:
       - 2.0.50727
       webserver:
-      - usseatuicte69
+      - usseatuicte37
       date:
-      - Thu, 22 Dec 2011 02:58:30 GMT
+      - Thu, 22 Dec 2011 14:45:27 GMT
+      content-length:
+      - '139'
     body: <ReportsList xmlns="http://www.concursolutions.com/api/expense/expensereport/2011/03"><ReportSummary><ReportName>August Expenses</ReportName><ReportTotal>245.00000000</ReportTotal><ReportId>14B7C9053CAA4864A27F</ReportId><ReportDate>2010-08-06T00:00:00</ReportDate><LastComment></LastComment><Report-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/report/ndfsdfseSDFDwaXZesdsfs</Report-Details-Url><Report-Full-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/reportfulldetails/ndfsdfseSDFDwaXZesdsfs</Report-Full-Details-Url><ExpenseUserXUserID>cmiller@example.com</ExpenseUserXUserID><ApproverXUserID>tbrown@example.com</ApproverXUserID></ReportSummary></ReportsList>
     http_version: '1.1'

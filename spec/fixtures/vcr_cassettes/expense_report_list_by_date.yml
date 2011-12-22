@@ -2,33 +2,33 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/reportslist/APPROVED/LastModified?date=2011-12-21
+    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/reportslist/APPROVED/LastModified?date=2011-12-22
     body: !!null 
     headers:
       authorization:
-      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="c1b1940cfb5d706c2c4f461b4883a56a",
-        oauth_signature="wcnBt%2BW%2FFY6a8k3K8h82b1nNYEo%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1324522710", oauth_version="1.0"
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="1f19eb81e4c9b6cf5719d00d5a9129d7",
+        oauth_signature="Q4XX%2F42vKcr6ayvBaaVCLOPDHAg%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1324565127", oauth_version="1.0"
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response: !ruby/struct:VCR::Response
     status: !ruby/struct:VCR::ResponseStatus
-      code: 403
-      message: Forbidden
+      code: 200
+      message: OK
     headers:
       cache-control:
       - private
-      transfer-encoding:
-      - chunked
       content-type:
-      - application/xml; charset=utf-8
+      - application/xml
       server:
       - Microsoft-IIS/7.5
       x-aspnet-version:
       - 2.0.50727
       webserver:
-      - usseaeuicte17
+      - usseaeuicte29
       date:
-      - Thu, 22 Dec 2011 02:58:32 GMT
+      - Thu, 22 Dec 2011 14:45:28 GMT
+      content-length:
+      - '139'
     body: <ReportsList xmlns="http://www.concursolutions.com/api/expense/expensereport/2011/03"><ReportSummary><ReportName>August Advertising</ReportName><ReportId>FF0B2D6412C848CBA902</ReportId><ReportTotal>588.00000000</ReportTotal><ReportDate>2011-07-06T12:24:15</ReportDate><LastComment>Print and TV ads.</LastComment><Report-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/report/FF0B2D6412C848CBA902</Report-Details-Url><Report-Full-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/reportfulldetails/FF0B2D6412C848CBA902</Report-Full-Details-Url><ExpenseUserXUserID>cmiller@example.com</ExpenseUserXUserID><ApproverXUserID>tbrown@example.com</ApproverXUserID></ReportSummary><ReportSummary><ReportName>Trip to Seattle</ReportName><ReportId>DD4B3AB3AA104412B35B</ReportId><ReportTotal>1423.47000000</ReportTotal><ReportDate>2011-07-06T17:31:31</ReportDate><LastComment></LastComment><Report-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/report/DD4B3AB3AA104412B35B</Report-Details-Url><Report-Full-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/reportfulldetails/DD4B3AB3AA104412B35B</Report-Full-Details-Url><ExpenseUserXUserID>tbrown@example.com</ExpenseUserXUserID><ApproverXUserID>pdavis@example.com</ApproverXUserID></ReportSummary></ReportsList>
     http_version: '1.1'

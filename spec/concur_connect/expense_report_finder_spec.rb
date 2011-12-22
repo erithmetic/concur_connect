@@ -9,7 +9,7 @@ describe ConcurConnect::ExpenseReportFinder do
   describe '#find' do
     it 'gets a list of expense reports with a given status' do
       VCR.use_cassette('expense_report list by status', :record => :once) do
-        list = finder.find(nil, 'APPROVED')
+        list = finder.find('derek.kastner@brighterplanet.com', 'APPROVED')
         list.should_not be_empty
         list.each { |i| i.should be_a(ConcurConnect::ExpenseReport) }
       end
