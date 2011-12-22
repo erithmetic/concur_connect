@@ -1,0 +1,34 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/reportslist/APPROVED
+    body: !!null 
+    headers:
+      authorization:
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="80d3669fa4fbf48a2eb1aaa5496d25fe",
+        oauth_signature="Zmw9jhM6NRtozrnT%2FtCDj1tQtJI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1324522708", oauth_version="1.0"
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      transfer-encoding:
+      - chunked
+      content-type:
+      - application/xml; charset=utf-8
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      webserver:
+      - usseatuicte69
+      date:
+      - Thu, 22 Dec 2011 02:58:30 GMT
+    body: <ReportsList xmlns="http://www.concursolutions.com/api/expense/expensereport/2011/03"><ReportSummary><ReportName>August Expenses</ReportName><ReportTotal>245.00000000</ReportTotal><ReportId>14B7C9053CAA4864A27F</ReportId><ReportDate>2010-08-06T00:00:00</ReportDate><LastComment></LastComment><Report-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/report/ndfsdfseSDFDwaXZesdsfs</Report-Details-Url><Report-Full-Details-Url>http://www.concursolutions.com/api/expense/expensereport/v1.1/reportfulldetails/ndfsdfseSDFDwaXZesdsfs</Report-Full-Details-Url><ExpenseUserXUserID>cmiller@example.com</ExpenseUserXUserID><ApproverXUserID>tbrown@example.com</ApproverXUserID></ReportSummary></ReportsList>
+    http_version: '1.1'
