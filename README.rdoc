@@ -1,6 +1,17 @@
 = concur_connect
 
-Description goes here.
+ConcurConnect makes using the Concur Connect API (http://developer.concur.com) a breeze to use.
+
+== Installation
+
+    gem install concur_connect
+
+== Quick start
+
+    require 'concur_connect'
+    concur = ConcurConnect.session 'token', 'secret', 'company ID'
+    reports = concur.expense_reports Date.new(2011, 9, 1)  # all approved reports since 9/1/2011
+    puts reports.first.expenses.inspect
 
 == Note on Patches/Pull Requests
  
