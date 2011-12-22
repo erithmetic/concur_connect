@@ -1,0 +1,35 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/reportslist/APPROVED/LastModified?date=2011-09-01
+    body: !!null 
+    headers:
+      authorization:
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="434eb78e313fee53c77ea80fd83e4958",
+        oauth_signature="vCbApqFzcjYe9nyfiOpnpWHVGnM%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1324585998", oauth_version="1.0"
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/xml
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      webserver:
+      - usseatuicte68
+      date:
+      - Thu, 22 Dec 2011 20:33:19 GMT
+      content-length:
+      - '750'
+    body: <ReportsList xmlns="http://www.concursolutions.com/api/expense/expensereport/2011/03"
+      xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ReportSummary><ReportName>Fuel</ReportName><ReportId>AD63693E22DB4F65BA05</ReportId><ReportTotal>263.04000000</ReportTotal><ReportDate>2011-11-23T00:00:00</ReportDate><LastComment/><Report-Details-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/report/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy</Report-Details-Url><Report-Full-Details-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/reportfulldetails/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy</Report-Full-Details-Url><ExpenseUserXUserID>derek.kastner@brighterplanet.com</ExpenseUserXUserID><ApproverXUserID/></ReportSummary></ReportsList>
+    http_version: '1.1'

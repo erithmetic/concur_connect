@@ -1,0 +1,36 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/report/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy/entries
+    body: !!null 
+    headers:
+      authorization:
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="91f01e36084b979398e773a09366be04",
+        oauth_signature="NTeVl2mEMUuGd2Fh2RnARtCR0ZU%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1324586053", oauth_version="1.0"
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/xml
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      webserver:
+      - usseatuicte56
+      date:
+      - Thu, 22 Dec 2011 20:34:13 GMT
+      content-length:
+      - '1077'
+    body: <ExpenseEntriesList xmlns="http://www.concursolutions.com/api/expense/expensereport/2011/03"
+      xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ExpenseEntrySummary><ApprovedAmount>83.22000000</ApprovedAmount><Expense-Entry-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/report/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy/entry/n7w$pAOZMAeLZLiZZHq6M764nL1AHtcMtQ</Expense-Entry-Url><ExpenseName>Gas</ExpenseName><LocationName/><TransactionAmount>83.22000000</TransactionAmount><TransactionCrnCode>USD</TransactionCrnCode><VendorDescription/><VendorListName/></ExpenseEntrySummary><ExpenseEntrySummary><ApprovedAmount>179.82000000</ApprovedAmount><Expense-Entry-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/report/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy/entry/n7w$pAOZByd82Y9p6KwXMFISMo1mcNqatX</Expense-Entry-Url><ExpenseName>Personal
+      Car Mileage</ExpenseName><LocationName/><TransactionAmount>179.82000000</TransactionAmount><TransactionCrnCode>USD</TransactionCrnCode><VendorDescription/><VendorListName/></ExpenseEntrySummary></ExpenseEntriesList>
+    http_version: '1.1'
