@@ -21,6 +21,7 @@ module ConcurConnect
       user.login_id = response['LoginId']
       user.first_name = response['FirstName']
       user.last_name = response['LastName']
+      user.session = session
       user
     end
   end
