@@ -14,21 +14,10 @@ module ConcurConnect
       self.consumer_secret = consumer_secret
       self.company_id = company_id
       self.debug = debug
+      @user_finder = UserFinder.new self
+      @expense_report_finder = ExpenseReportFinder.new self
 
-      __setobj__ faraday  # wrap Faraday in a loving embrace
-    end
-    alias :debug? :debug
-
-    def user_finder
-      @user_finder ||= UserFinder.new self
-    end
-
-    def user(id)
-      @user ||= user_finder.find id
-    end
-
-    def faraday
-      Faraday.new(:url => 'https://www.concursolutions.com/api') do |builder|
+      faraday = Faraday.new(:url => 'https://www.concursolutions.com/api') do |builder|
         builder.request :OAuth, {
           :consumer_key => consumer_key,
           :consumer_secret => consumer_secret
@@ -40,6 +29,16 @@ module ConcurConnect
 
         builder.use Faraday::Response::ParseXml
       end
+      __setobj__ faraday  # wrap Faraday in a loving embrace
+    end
+    alias :debug? :debug
+
+    def user(id)
+      @user ||= @user_finder.find id
+    end
+
+    def expense_reports(date, status = 'APPROVED')
+      @expense_reports ||= @expense_report_finder.find nil, status, date
     end
   end
 end
