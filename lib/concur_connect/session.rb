@@ -37,8 +37,8 @@ module ConcurConnect
       @user ||= @user_finder.find id
     end
 
-    def expense_reports(date, status = 'APPROVED')
-      @expense_reports ||= @expense_report_finder.find nil, status, date
+    def expense_reports(user_id, date, status = 'APPROVED')
+      @expense_reports ||= @expense_report_finder.find user_id, status, date
     end
   end
 end
