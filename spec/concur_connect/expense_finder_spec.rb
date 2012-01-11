@@ -8,8 +8,8 @@ describe ConcurConnect::ExpenseFinder do
 
   describe '#find' do
     it 'gets a list of expense reports with a given status' do
-      VCR.use_cassette('expense list', :record => :once) do
-        list = finder.find('nABR4fUZDftz3veYYzMffJR5k3uLU7xQy')
+      VCR.use_cassette('expense list') do
+        list = finder.find('https://www.concursolutions.com:443/api/expense/expensereport/v1.1/report/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy')
         list.should_not be_empty
         list.each { |i| i.should be_a(ConcurConnect::Expense) }
       end

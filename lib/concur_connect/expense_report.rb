@@ -10,12 +10,8 @@ module ConcurConnect
       @expense_finder ||= ExpenseFinder.new session
     end
 
-    def api_id
-      File.basename details_url
-    end
-
     def expenses
-      @expenses ||= expense_finder.find api_id
+      @expenses ||= expense_finder.find details_url
     end
   end
 end

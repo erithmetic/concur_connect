@@ -5,9 +5,8 @@ module ConcurConnect
   class ExpenseFinder
     include Finder
     
-    def find(report_id)
-      url = "/api/expense/expensereport/v1.1/report/#{report_id}/entries"
-      response = session.get url
+    def find(expense_report_url)
+      response = session.get expense_report_url + '/entries'
       build_expenses response.body
     end
 
@@ -17,10 +16,9 @@ module ConcurConnect
         items = data['ExpenseEntriesList']['ExpenseEntrySummary']
         items = [items] unless items.is_a?(Array)
         items.each do |datum|
-          expense = Expense.new
-          expense.type = datum['ExpenseName']
-          expense.amount = datum['TransactionAmount']
-          expense.vendor = datum['VendorListName']
+          expense = Expense.new :session => session, :details_url => datum['Expense_Entry_Url'],
+            :type => datum['ExpenseName'], :amount => datum['TransactionAmount'],
+            :vendor => datum['VendorListName']
           list << expense
         end
       end

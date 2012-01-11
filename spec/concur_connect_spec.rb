@@ -7,17 +7,22 @@ describe ConcurConnect do
     user = nil
     expense_reports = nil
 
-    VCR.use_cassette('session expense reports', :record => :once) do
-      expense_reports = concur.expense_reports Date.new(2011, 9, 1)
+    VCR.use_cassette 'session expense reports'  do
+      expense_reports = concur.expense_reports 'derek.kastner@brighterplanet.com', Date.new(2011, 9, 1)
       expense_reports.should_not be_empty
     end
 
-    VCR.use_cassette('session expenses', :record => :once) do
+    expenses = nil
+    VCR.use_cassette 'session expenses'  do
       expenses = expense_reports.first.expenses
       expenses.should_not be_empty
     end
 
-    VCR.use_cassette('session user', :record => :once) do
+    VCR.use_cassette 'session expense details'  do
+      expenses.first.transaction_date.should be_a(Date)
+    end
+
+    VCR.use_cassette 'session user'  do
       user = concur.user('derek.kastner@brighterplanet.com')
       user.should be_a(ConcurConnect::User)
     end

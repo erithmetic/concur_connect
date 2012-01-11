@@ -1,0 +1,36 @@
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
+    method: :get
+    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/report/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy/entry/n7w$pAOZMAeLZLiZZHq6M764nL1AHtcMtQ
+    body: !!null 
+    headers:
+      authorization:
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="06a2decce896f68598d5d83cf928a965",
+        oauth_signature="eEBw46ugF%2BsHpGfQliwJrheglkI%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1326310896", oauth_version="1.0"
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
+      code: 200
+      message: OK
+    headers:
+      cache-control:
+      - private
+      content-type:
+      - application/xml
+      server:
+      - Microsoft-IIS/7.5
+      x-aspnet-version:
+      - 2.0.50727
+      webserver:
+      - usseaeuicte23
+      date:
+      - Wed, 11 Jan 2012 19:41:37 GMT
+      content-length:
+      - '1637'
+    body: <ExpenseEntry xmlns="http://www.concursolutions.com/api/expense/expensereport/2011/03"
+      xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ApprovedAmount>83.22000000</ApprovedAmount><BusinessPurpose/><EreceiptId/><ExchangeRate>1.00000000000000</ExchangeRate><ExpenseKey>GASXX</ExpenseKey><ExpenseName>Gas</ExpenseName><HasAllocation>N</HasAllocation><HasAttendees>N</HasAttendees><HasComments>N</HasComments><HasExceptions>Y</HasExceptions><HasVat>N</HasVat><ImageRequired>Y</ImageRequired><IsCreditCardCharge>N</IsCreditCardCharge><IsItemized>N</IsItemized><IsPersonal>N</IsPersonal><IsPersonalCardCharge>N</IsPersonalCardCharge><LastModified>2011-12-22T15:14:52</LastModified><LocationName/><PaymentTypeKey>CASH</PaymentTypeKey><PostedAmount>83.22000000</PostedAmount><ReceiptImageId/><ReceiptRequired>N</ReceiptRequired><ReportEntryID>n7w$pAOZMAeLZLiZZHq6M764nL1AHtcMtQ</ReportEntryID><ReportID>nABR4fUZDftz3veYYzMffJR5k3uLU7xQy</ReportID><TransactionAmount>83.22000000</TransactionAmount><TransactionCurrencyName>US,
+      Dollar</TransactionCurrencyName><TransactionDate>2011-12-02T00:00:00</TransactionDate><VendorDescription/><X_UserID>derek.kastner@brighterplanet.com</X_UserID><Custom1>N</Custom1><Custom2/><Custom3/><Custom4/><Custom5/><Custom6/><Custom7/><Custom8/><Custom9/><Custom10/><Custom11/><Custom12/><Custom13/><Custom14/><Custom15/><Custom16/><Custom17/><Custom18/><Custom19/><Custom20/><Custom21/><Custom22/><Custom23/><Custom24/><Custom25/><Custom26/><Custom27/><Custom28/><Custom29/><Custom30/><Custom31/><Custom32/><Custom33/><Custom34/><Custom35/><Custom36/><Custom37/><Custom38/><Custom39/><Custom40/></ExpenseEntry>
+    http_version: '1.1'
