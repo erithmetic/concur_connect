@@ -1,12 +1,11 @@
 require 'bundler'
 Bundler.setup
 
-require 'rspec'
 require 'concur_connect'
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
-
-RSpec.configure do |config|
+require 'vcr'
+VCR.configure do |c|
+  c.cassette_library_dir = 'spec/fixtures/vcr_cassettes'
+  c.stub_with :fakeweb, :faraday
+  c.default_cassette_options = { :record => :new_episodes }
 end
