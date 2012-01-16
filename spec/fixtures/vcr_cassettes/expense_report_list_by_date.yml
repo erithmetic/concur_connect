@@ -2,13 +2,13 @@
 - !ruby/struct:VCR::HTTPInteraction
   request: !ruby/struct:VCR::Request
     method: :get
-    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/reportslist/APPROVED/LastModified?date=2011-12-22
+    uri: https://www.concursolutions.com:443/api/expense/expensereport/v1.1/reportslist/APPROVED/LastModified?date=2012-01-16T05%3A00%3A00
     body: !!null 
     headers:
       authorization:
-      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="5a97820cd02e5126b3b219e81cd11991",
-        oauth_signature="bzj5lx%2BXN9Lr%2BdYMPIGYheyItbQ%3D", oauth_signature_method="HMAC-SHA1",
-        oauth_timestamp="1324566949", oauth_version="1.0"
+      - OAuth oauth_consumer_key="3dcPjZyTeQziAndLnUALTI", oauth_nonce="e1c2c9f1ed9f72bc5671c9c089667979",
+        oauth_signature="imaKiv14zeiy7GDOJaOyEnqQ59U%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1326733197", oauth_version="1.0"
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
   response: !ruby/struct:VCR::Response
@@ -25,11 +25,11 @@
       x-aspnet-version:
       - 2.0.50727
       webserver:
-      - usseatuicte66
+      - usseatuicte45
       date:
-      - Thu, 22 Dec 2011 15:15:50 GMT
+      - Mon, 16 Jan 2012 16:59:58 GMT
       content-length:
       - '750'
     body: <ReportsList xmlns="http://www.concursolutions.com/api/expense/expensereport/2011/03"
-      xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ReportSummary><ReportName>Fuel</ReportName><ReportId>AD63693E22DB4F65BA05</ReportId><ReportTotal>263.04000000</ReportTotal><ReportDate>2011-11-23T00:00:00</ReportDate><LastComment/><Report-Details-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/report/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy</Report-Details-Url><Report-Full-Details-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/reportfulldetails/nABR4fUZDftz3veYYzMffJR5k3uLU7xQy</Report-Full-Details-Url><ExpenseUserXUserID>derek.kastner@brighterplanet.com</ExpenseUserXUserID><ApproverXUserID/></ReportSummary></ReportsList>
+      xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><ReportSummary><ReportName>temp</ReportName><ReportId>084616BBBA63461A9E31</ReportId><ReportTotal>111.00000000</ReportTotal><ReportDate>2012-01-16T00:00:00</ReportDate><LastComment/><Report-Details-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/report/nABR4fUczD9gpsQ7XNGKnfi9XMFZ2Szsh</Report-Details-Url><Report-Full-Details-Url>https://www.concursolutions.com/api/expense/expensereport/v1.1/reportfulldetails/nABR4fUczD9gpsQ7XNGKnfi9XMFZ2Szsh</Report-Full-Details-Url><ExpenseUserXUserID>derek.kastner@brighterplanet.com</ExpenseUserXUserID><ApproverXUserID/></ReportSummary></ReportsList>
     http_version: '1.1'

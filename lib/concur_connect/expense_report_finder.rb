@@ -16,7 +16,7 @@ module ConcurConnect
     # date: a Date/Time object for filtering
     def find(user_id = nil, status = 'APPROVED', date = nil)
       url = "/api/expense/expensereport/v1.1/reportslist/#{status}"
-      url += "/LastModified?date=#{date.strftime('%Y-%m-%d')}" if date
+      url += "/LastModified?date=#{date.utc.strftime('%Y-%m-%dT%H:%M:%S')}" if date
       response = session.get url do |g|
         g.headers['X-UserID'] = user_id if user_id
       end

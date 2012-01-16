@@ -16,7 +16,7 @@ describe ConcurConnect::ExpenseReportFinder do
     end
     it 'gets a list of expense reports with a given status and last modified date' do
       VCR.use_cassette('expense_report list by date') do
-        list = finder.find(nil, 'APPROVED', Time.new(2011,12,22))
+        list = finder.find(nil, 'APPROVED', Time.new(2012,1,16))
         list.should_not be_empty
         list.each { |i| i.should be_a(ConcurConnect::ExpenseReport) }
       end
